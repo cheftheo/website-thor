@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+* {
+  overflow: hidden;
+  user-select: none;
+  box-sizing: border-box; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+html, body {
+  color: white;
+  height: 100vh;
+  z-index: -2; }
+
+body {
+  background-image: linear-gradient(
+    -35deg,
+    rgb(15, 10, 5),
+    rgb(51, 42, 31)
+  );
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0);
+    opacity: 0; }
+  to {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(5px);
+    opacity: 0; }
+  to {
+    transform: translateY(0px);
+    opacity: 1; } 
+}
+
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 28%; }
+}
+
+#char {
+  position: absolute;
+  top: 16%;
+  left: 10%;
+  width: 100%;
+  height: 100%;
+  background: url('pers_1.png') no-repeat;
+  /* background-size: 35%; */
+  background-size: contain;
+  background-position: left;
+  opacity: 0.8;
+}
+
+h1 {
+  font-weight: bolder;
+  animation: slideUp 1s ease-in-out;
+}
+
+h2 {
+  font-weight: 100;
+  margin-top: -25px;
+  animation: slideUp 5s ease-in-out;
+}
+
+h4 {
+  font-weight: 100;
+  animation: slideUp 5s ease-in-out;
+}
+
+#texting {
+  position: absolute;
+  top: 25%; 
+  left: 15%;
+  width: 100%;
+  /* height: 100%; */
+  text-align: center;
+  font-size: large;
+  overflow: visible;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  font-size: large;
+  font-weight: bolder;
+  border-radius: 5px;
+  background-color: rgb(78, 71, 58);
+  color: white;
+  transition: all 0.5s ease-in-out;
+  animation: slideUp 8s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(121, 104, 72);
+  cursor: pointer;
+}
+
+#btn-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#full-progress {
+  position: absolute;
+  top: 100%;
+  left: 40%;
+}
+
+.progress {
+  background: rgba(225, 225, 225, 0.2);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  padding: 0 5px;
+  display: flex;
+  height: 20px;
+  width: 300px;
+
+  position: absolute;
+  top: 100%;
+  left: 40%;
+}
+
+.progress-value {
+  animation: load 4s normal forwards;
+  box-shadow: 0 10px 40px -10px rgb(235, 223, 155);
+  border-radius: 100px;
+  background: rgb(206, 183, 150);
+  height: 10px;
+  width: 0;
+}
